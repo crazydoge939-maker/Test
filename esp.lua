@@ -624,7 +624,7 @@ TeleportTool.MouseButton1Up:Connect(function()
 	mouse = game.Players.LocalPlayer:GetMouse()
 	tool = Instance.new("Tool")
 	tool.RequiresHandle = false
-	tool.Name = "Metal"
+	tool.Name = "TP Tool"
 	tool.Activated:connect(function()
 		local pos = mouse.Hit+Vector3.new(0,2.5,0)
 		pos = CFrame.new(pos.X,pos.Y,pos.Z)
