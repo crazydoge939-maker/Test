@@ -547,12 +547,12 @@ AutoOpenAllChests.MouseButton1Up:Connect(function()
 		_G.OpenAllChests = true
 		while _G.OpenAllChests == true do wait(1)
 			for i,v in pairs(game.Players.LocalPlayer:FindFirstChildOfClass("Backpack"):GetChildren()) do
-				if v.Name == "Chest" or v.Name == "Dark Chest" or v.Name == "Light Chest" then
+				if v.Name == "Chest" then
 					v.Parent = game.Players.LocalPlayer.Character
 				end
 			end
 			for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-				if v.Name == "Chest" or v.Name == "Dark Chest" or v.Name == "Light Chest" then
+				if v.Name == "Chest" then
 					v:Activate()
 				end
 			end
@@ -616,7 +616,7 @@ TeleportTool.BackgroundTransparency = .5
 TeleportTool.MouseButton1Up:Connect(function()
 
 	for i,v in pairs(game.Players.LocalPlayer:FindFirstChildOfClass("Backpack"):GetChildren()) do
-		if v.Name == "Metal" then
+		if v.Name == "TP Tool" then
 			v:Destroy()
 		end
 	end
